@@ -1,0 +1,70 @@
+  <!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+  <meta charset="UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <title>Biblioteca - CRUD de Libros</title> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link 
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&displa
+ y=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles.css" /> 
+</head> 
+<body> 
+  <header class="container"> 
+    <h1>📚 Biblioteca</h1> 
+    <p class="subtitle">CRUD de libros con Node.js, Express y MySQL</p> 
+  </header> 
+ 
+  <main class="container"> 
+    <section class="card"> 
+      <h2>Agregar / Editar Libro</h2> 
+      <form id="book-form"> 
+        <input type="hidden" id="book-id" /> 
+        <div class="grid"> 
+          <div class="field"> 
+            <label for="titulo">Título</label> 
+            <input id="titulo" name="titulo" placeholder="El Quijote" 
+required /> 
+          </div> 
+          <div class="field"> 
+            <label for="autorId">Autor</label> 
+            <select id="autorId" name="autorId" required></select> 
+          </div> 
+        </div> 
+        <div class="actions"> 
+          <button type="submit" id="save-btn">Guardar</button> 
+          <button type="button" id="reset-btn" 
+class="secondary">Limpiar</button> 
+        </div> 
+      </form> 
+    </section> 
+ 
+    <section class="card"> 
+      <div class="table-header"> 
+        <h2>Libros</h2> 
+        <button id="reload-btn" class="secondary">Recargar</button> 
+      </div> 
+      <div class="table-wrapper"> 
+        <table> 
+          <thead> 
+            <tr> 
+              <th>ID</th> 
+              <th>Título</th> 
+              <th>Autor</th> 
+              <th>Acciones</th> 
+            </tr> 
+          </thead> 
+          <tbody id="books-tbody"></tbody> 
+        </table> 
+      </div> 
+    </section> 
+  </main> 
+ 
+  <footer class="container footer">Hecho para alumnos • Node + Express + 
+MySQL</footer> 
+ 
+  <script src="scripts.js"></script> 
+</body> 
+</html> 
